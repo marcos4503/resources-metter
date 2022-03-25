@@ -1,7 +1,7 @@
 <p align="center" style="font-size: 2px;">
     <img src="Resources-Metter-Source/ReadMe/Resources/Resources-Metter-Front.png" />
     <br>
-    Cldsfd
+    Clone this repository and then copy the "Resources-Metter-Compiled" folder to your computer. After that, run the "Resources Metter.exe" file present in "Resources-Metter-Compiled/Resources Metter/program/bin". So just enjoy!
 </p>
 
 # resources-metter
