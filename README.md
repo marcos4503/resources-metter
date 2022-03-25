@@ -1,10 +1,24 @@
 <p align="center" style="font-size: 2px;">
     <img src="Resources-Metter-Source/ReadMe/Resources/Resources-Metter-Front.png" />
     <br>
-    Clone this repository and then copy the "Resources-Metter-Compiled" folder to your computer. After that, run the "Resources Metter.exe" file present in "Resources-Metter-Compiled/Resources Metter/program/bin". So just enjoy!
+    Clone this repository and then copy the "Resources-Metter-Compiled" folder to your computer. Read all the instructions below and then just enjoy!
 </p>
 
-# resources-metter
+# To use this Software
+
+First, download this repository by cloning the "Resources-Metter-Compiled" folder to your computer. After that, run the "Resources Metter.exe" file present in "Resources-Metter-Compiled/Resources Metter/program/bin". So just enjoy!
+
+You can move the "Resources Metter" folder to somewhere you prefer on your computer and after placing the folder in the best location you decide, you can go to the software settings and then enable "Auto Start", so Resources Mettter will launch as soon as your computer turns on.
+
+By right-clicking the "Resources Metter" status icon on your taskbar, you will be able to access various Software options, including settings, etc.
+
+# Prerequisites to use this Software
+
+You need to fulfill some requirements to be able to use this Software...
+
+- The computer may need to have .Net 3.1 installed in order to run the Software.
+- The computer must be 64-bit.
+- Your operating system's UAC needs to be disabled, or at the very least you need to allow Resources Metter to work without the UAC getting in your way.Your operating system's UAC needs to be disabled, or at the very least you need to allow Resources Metter to work without the UAC getting in your way. If the UAC blocks the Resources Metter for some reason, several metering functions will stop working. You can refer to <a href="https://www.howtogeek.com/howto/windows-vista/disable-user-account-control-uac-the-easy-way-on-windows-vista/" target="_blank">this</a> link for more details on Windows UAC.
 
 # Support projects like this
 
