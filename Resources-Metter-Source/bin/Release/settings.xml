@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ApplicationPreferences xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <overlayPosition>3</overlayPosition>
+  <screenToShow>0</screenToShow>
+  <metricsStyle>1</metricsStyle>
+  <overlayTheme>1</overlayTheme>
+  <overlayOpacity>75</overlayOpacity>
+  <overlayPositionX>0</overlayPositionX>
+  <overlayPositionY>0</overlayPositionY>
+  <enableAutoHide>true</enableAutoHide>
+  <enableBoldText>false</enableBoldText>
+  <metricsUpdateInterval>300</metricsUpdateInterval>
+  <networkInterfacePreferred>-1</networkInterfacePreferred>
+  <networkUnit>1</networkUnit>
+  <enableClock>false</enableClock>
+  <enableTopMost>true</enableTopMost>
+  <ignoreFromAutoHide>
+    <string>Program Manager</string>
+    <string> menu</string>
+    <string>menu</string>
+  </ignoreFromAutoHide>
+  <overheatWarningForCpu>70</overheatWarningForCpu>
+  <overheatWarningForGpu>70</overheatWarningForGpu>
+  <startOnBoot>false</startOnBoot>
+</ApplicationPreferences>

@@ -1,0 +1,19 @@
+﻿<Window x:Class="Resources_Metter.WindowAbout"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Resources_Metter"
+        mc:Ignorable="d"
+        Title="Resources Metter: About" Height="400" Width="250" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Topmost="True">
+    <Grid>
+        <Image x:Name="image" Height="100" Margin="0,0,0,0" VerticalAlignment="Top" Source="/resources/window-header.png" Stretch="UniformToFill"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Center" Margin="0,29,0,0" TextWrapping="Wrap" Text="About" VerticalAlignment="Top" Width="200" TextAlignment="Center" FontWeight="Bold" Foreground="White" FontSize="24" LineStackingStrategy="MaxHeight" Panel.ZIndex="2"/>
+        <TextBlock x:Name="textBlock1" HorizontalAlignment="Stretch" Margin="16,108,16,0" TextWrapping="Wrap" Text="Resources Metter is an application that aims to provide an Overlay for the Desktop that has the function of displaying hardware sensor information. This Overlay shows useful information such as GPU or CPU temperature, GPU usage, CPU, RAM memory and so on." VerticalAlignment="Top" TextAlignment="Center" Foreground="#FF404040"/>
+        <TextBlock x:Name="textBlock2" Margin="8,283,8,0" TextWrapping="Wrap" Text="Created with ❤️ by Marcos Tomaz in 2021" VerticalAlignment="Top" TextAlignment="Center" FontSize="10"/>
+        <TextBlock x:Name="textBlock3" HorizontalAlignment="Center" Margin="0,298,0,0" TextWrapping="Wrap" Text="This project uses the library &quot;LibreHardwaremonitor&quot; v0.8.8 to obtain the temperature information." VerticalAlignment="Top" Foreground="#FF949494" FontSize="8" TextAlignment="Center"/>
+        <TextBlock x:Name="textBlock3_Copy" HorizontalAlignment="Center" Margin="0,329,0,0" TextWrapping="Wrap" Text="This is a free software!" VerticalAlignment="Top" Foreground="#FF949494" FontSize="8"/>
+        <Rectangle HorizontalAlignment="Stretch" Height="0.2" Margin="0,324,0,0" VerticalAlignment="Top" Fill="#7F000000"/>
+
+    </Grid>
+</Window>

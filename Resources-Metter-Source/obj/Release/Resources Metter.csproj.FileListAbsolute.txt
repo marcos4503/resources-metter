@@ -1,0 +1,27 @@
+D:\Visual-Studio\Resources Metter\bin\Release\Resources Metter.exe.config
+D:\Visual-Studio\Resources Metter\bin\Release\Resources Metter.exe
+D:\Visual-Studio\Resources Metter\bin\Release\Resources Metter.pdb
+D:\Visual-Studio\Resources Metter\bin\Release\HidSharp.dll
+D:\Visual-Studio\Resources Metter\bin\Release\LibreHardwareMonitorLib.dll
+D:\Visual-Studio\Resources Metter\bin\Release\NvAPIWrapper.dll
+D:\Visual-Studio\Resources Metter\obj\Release\Resources Metter.csproj.SuggestedBindingRedirects.cache
+D:\Visual-Studio\Resources Metter\obj\Release\MainWindow.g.cs
+D:\Visual-Studio\Resources Metter\obj\Release\WindowAbout.g.cs
+D:\Visual-Studio\Resources Metter\obj\Release\WindowOverheatWarn.g.cs
+D:\Visual-Studio\Resources Metter\obj\Release\WindowSettings.g.cs
+D:\Visual-Studio\Resources Metter\obj\Release\App.g.cs
+D:\Visual-Studio\Resources Metter\obj\Release\Resources Metter_MarkupCompile.cache
+D:\Visual-Studio\Resources Metter\obj\Release\Resources Metter_MarkupCompile.lref
+D:\Visual-Studio\Resources Metter\obj\Release\MainWindow.baml
+D:\Visual-Studio\Resources Metter\obj\Release\WindowAbout.baml
+D:\Visual-Studio\Resources Metter\obj\Release\WindowOverheatWarn.baml
+D:\Visual-Studio\Resources Metter\obj\Release\WindowSettings.baml
+D:\Visual-Studio\Resources Metter\obj\Release\Resources Metter.g.resources
+D:\Visual-Studio\Resources Metter\obj\Release\Resources_Metter.Properties.Resources.resources
+D:\Visual-Studio\Resources Metter\obj\Release\Resources Metter.csproj.GenerateResource.cache
+D:\Visual-Studio\Resources Metter\obj\Release\Resources Metter.csproj.CoreCompileInputs.cache
+D:\Visual-Studio\Resources Metter\obj\Release\Resources Metter.csproj.CopyComplete
+D:\Visual-Studio\Resources Metter\obj\Release\Resources Metter.exe
+D:\Visual-Studio\Resources Metter\obj\Release\Resources Metter.pdb
+D:\Visual-Studio\Resources Metter\bin\Release\Microsoft.Win32.TaskScheduler.dll
+D:\Visual-Studio\Resources Metter\obj\Release\Resources Metter.csproj.AssemblyReference.cache

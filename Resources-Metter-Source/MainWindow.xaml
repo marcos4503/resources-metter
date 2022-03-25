@@ -1,0 +1,95 @@
+﻿<Window x:Class="Resources_Metter.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Resources_Metter"
+        mc:Ignorable="d"
+        Title="Resources Metter Overlay" Height="20" Width="288" Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Center" Opacity="0.75" AllowsTransparency="True" WindowStyle="None" ResizeMode="NoResize" ShowInTaskbar="False" Topmost="True" IsEnabled="False" Focusable="False" IsHitTestVisible="False" RenderTransformOrigin="0.5,0.5">
+    <Window.RenderTransform>
+        <TransformGroup>
+            <ScaleTransform ScaleX="1" ScaleY="1"/>
+            <SkewTransform/>
+            <RotateTransform/>
+            <TranslateTransform/>
+        </TransformGroup>
+    </Window.RenderTransform>
+    <Grid>
+        <Rectangle x:Name="overlayBackground" HorizontalAlignment="Stretch" Stroke="#00000000" VerticalAlignment="Stretch" Fill="Black" UseLayoutRounding="True" StrokeThickness="0" RadiusY="6" RadiusX="6"/>
+        <Image x:Name="downloadIcon" HorizontalAlignment="Left" Margin="184,4,0,4" Source="/resources/arrow-icon-white.png" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="180"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <TextBlock x:Name="download" HorizontalAlignment="Left" Margin="196,4,0,4" TextWrapping="Wrap" Text="000" Width="16" Cursor="" Foreground="White" FontSize="8" TextAlignment="Center" VerticalAlignment="Center" Height="12"/>
+        <Image x:Name="uploadIcon" HorizontalAlignment="Left" Margin="212,4,0,4" Source="/resources/arrow-icon-white.png"/>
+        <TextBlock x:Name="upload" HorizontalAlignment="Left" Margin="224,4,0,4" TextWrapping="Wrap" Text="000" Width="16" Cursor="" Foreground="White" FontSize="8" TextAlignment="Center" VerticalAlignment="Center" Height="12"/>
+        <Image x:Name="cpuIcon" HorizontalAlignment="Left" Margin="4,4,0,4" Source="/resources/cpu-icon-white.png" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <ProgressBar x:Name="cpuUsage" HorizontalAlignment="Left" Height="12" Margin="18,0,0,0" VerticalAlignment="Center" Width="12" BorderThickness="0,0,0,0" Value="10" Orientation="Vertical" Visibility="Visible"/>
+        <TextBlock x:Name="cpuUsagePercent" HorizontalAlignment="Left" Margin="18,4,0,4" TextWrapping="Wrap" Text="100%" Width="20" Cursor="" Foreground="White" FontSize="8" TextAlignment="Left" Visibility="Hidden" Height="12" VerticalAlignment="Center"/>
+        <TextBlock x:Name="cpuTemperature" HorizontalAlignment="Left" Margin="32,0,0,0" TextWrapping="Wrap" Text="00º" Width="13" Cursor="" Foreground="White" FontSize="8" TextAlignment="Center" FontWeight="Normal" VerticalAlignment="Center" Height="12" FontFamily="Segoe UI"/>
+        <Image x:Name="gpuIcon" HorizontalAlignment="Left" Margin="56,4,0,4" Source="/resources/gpu-icon-white.png" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <ProgressBar x:Name="gpuUsage" HorizontalAlignment="Left" Height="12" Margin="70,0,0,0" VerticalAlignment="Center" Width="12" BorderThickness="0,0,0,0" Value="10" Orientation="Vertical" Visibility="Visible"/>
+        <TextBlock x:Name="gpuUsagePercent" HorizontalAlignment="Left" Margin="70,4,0,4" TextWrapping="Wrap" Text="100%" Width="20" Cursor="" Foreground="White" FontSize="8" TextAlignment="Left" Visibility="Collapsed" VerticalAlignment="Center" Height="12"/>
+        <TextBlock x:Name="gpuTemperature" HorizontalAlignment="Left" Margin="84,4,0,4" TextWrapping="Wrap" Text="00º" Width="13" Cursor="" Foreground="White" FontSize="8" TextAlignment="Center" VerticalAlignment="Center" Height="12" FontWeight="Normal"/>
+        <Image x:Name="ramIcon" HorizontalAlignment="Left" Margin="108,4,0,4" Source="/resources/ram-icon-white.png" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="180"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <ProgressBar x:Name="ramUsage" HorizontalAlignment="Left" Height="12" VerticalAlignment="Center" Width="12" BorderThickness="0,0,0,0" Value="10" Orientation="Vertical" Margin="122,0,0,0"/>
+        <TextBlock x:Name="ramUsagePercent" HorizontalAlignment="Left" Margin="122,4,0,4" TextWrapping="Wrap" Text="100%" Width="20" Cursor="" Foreground="White" FontSize="8" TextAlignment="Left" Visibility="Collapsed" FontWeight="Normal" FontStyle="Normal" Height="12" VerticalAlignment="Center"/>
+        <Image x:Name="hddIcon" HorizontalAlignment="Left" Margin="146,4,0,4" Source="/resources/hdd-icon-white.png" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <ProgressBar x:Name="hddUsage" HorizontalAlignment="Left" Height="12" VerticalAlignment="Center" Width="12" BorderThickness="0,0,0,0" Value="10" Orientation="Vertical" Margin="160,0,0,0"/>
+        <TextBlock x:Name="hddUsagePercent" HorizontalAlignment="Left" Margin="160,4,0,4" TextWrapping="Wrap" Text="100%" Width="20" Cursor="" Foreground="White" FontSize="8" TextAlignment="Left" Visibility="Collapsed" FontWeight="Normal" FontStyle="Normal" VerticalAlignment="Center" Height="12"/>
+        <Image x:Name="clockIcon" HorizontalAlignment="Left" Margin="250,4,0,4" Source="/resources/clock-icon-white.png" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <TextBlock x:Name="clockUsage" HorizontalAlignment="Left" Margin="262,4,0,4" TextWrapping="Wrap" Text="00:00" Width="24" Cursor="" Foreground="White" FontSize="8" TextAlignment="Center" FontWeight="Normal" VerticalAlignment="Center" Height="12"/>
+
+    </Grid>
+</Window>
