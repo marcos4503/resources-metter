@@ -546,7 +546,7 @@ namespace Resources_Metter
                     {
                         hardware.Update();
                         foreach (ISensor sensor in hardware.Sensors)
-                            if (sensor.SensorType == SensorType.Temperature && sensor.Name == "Core Average")
+                            if (sensor.SensorType == SensorType.Temperature && sensor.Name == "CPU Package")
                                 if(sensor.Value != null)
                                     cpuTemp = (float)sensor.Value;
                     }
