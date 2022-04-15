@@ -14,38 +14,42 @@
         <TabControl x:Name="tabControl" Margin="8,148,8,79" Padding="0,2,0,0" BorderThickness="0,0,0,0">
             <TabItem Header="Appearance">
                 <Grid Background="#FFE5E5E5" Margin="0,0,0,0">
-                    <TextBlock x:Name="tab1_textBlock1" HorizontalAlignment="Left" Margin="0,16,0,0" TextWrapping="Wrap" Text="Overlay Position" VerticalAlignment="Top" Height="20" Width="187" FontStretch="Normal"/>
-                    <ComboBox x:Name="overlayPosition" Margin="192,15,0,0" VerticalAlignment="Top" Height="22">
-                        <ComboBoxItem Content="Top Left" IsSelected="True"/>
-                        <ComboBoxItem Content="Top Middle"/>
-                        <ComboBoxItem Content="Bottom Left"/>
-                        <ComboBoxItem Content="Bottom Middle"/>
-                        <ComboBoxItem Content="Bottom Right"/>
-                    </ComboBox>
-                    <TextBlock x:Name="tab1_textBlock2" HorizontalAlignment="Left" Margin="0,51,0,0" TextWrapping="Wrap" Text="Screen To Show" VerticalAlignment="Top" Height="20" Width="187" FontStretch="Normal"/>
-                    <ComboBox x:Name="screenToShow" Margin="192,50,0,0" VerticalAlignment="Top" Height="22">
-                        <ComboBoxItem Content="Main" IsSelected="True"/>
-                        <ComboBoxItem Content="Secondary"/>
-                    </ComboBox>
-                    <TextBlock x:Name="tab1_textBlock3" HorizontalAlignment="Left" Margin="0,87,0,0" TextWrapping="Wrap" Text="Metrics Style" VerticalAlignment="Top" Height="20" Width="187" FontStretch="Normal"/>
-                    <ComboBox x:Name="metricsStyle" Margin="192,86,0,0" VerticalAlignment="Top" Height="22">
-                        <ComboBoxItem Content="Percent" IsSelected="True"/>
-                        <ComboBoxItem Content="Bars" Margin="-1,0,0,0"/>
-                    </ComboBox>
-                    <TextBlock x:Name="tab1_textBlock4" HorizontalAlignment="Left" Margin="0,121,0,0" TextWrapping="Wrap" Text="Overlay Theme" VerticalAlignment="Top" Height="20" Width="187" FontStretch="Normal"/>
-                    <ComboBox x:Name="overlayTheme" Margin="192,120,0,0" VerticalAlignment="Top" Height="22">
-                        <ComboBoxItem Content="Light" IsSelected="True"/>
-                        <ComboBoxItem Content="Dark" Margin="-1,0,0,0"/>
-                    </ComboBox>
-                    <TextBlock x:Name="tab1_textBlock5" HorizontalAlignment="Left" Margin="0,155,0,0" TextWrapping="Wrap" Text="Overlay Opacity" VerticalAlignment="Top" Height="20" Width="187" FontStretch="Normal"/>
-                    <Slider x:Name="overlayOpacity" Margin="193,156,0,0" VerticalAlignment="Top" Maximum="100" Minimum="50" AutoToolTipPlacement="TopLeft" Value="50"/>
-                    <TextBlock x:Name="tab1_textBlock6" HorizontalAlignment="Left" Margin="0,189,0,0" TextWrapping="Wrap" Text="Custom Position" VerticalAlignment="Top" Height="20" Width="187" FontStretch="Normal"/>
-                    <TextBox x:Name="customPositionX" HorizontalAlignment="Left" Margin="192,188,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="86" InputScope="Number" Height="22" TextAlignment="Center" MaxLength="4" HorizontalContentAlignment="Left" Padding="0,0,0,0" VerticalContentAlignment="Center" PreviewTextInput="NumberValidationTextBox"/>
-                    <TextBox x:Name="customPositionY" HorizontalAlignment="Left" Margin="282,188,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="86" InputScope="Number" Height="22" MaxLength="4" TextAlignment="Center" VerticalContentAlignment="Center" PreviewTextInput="NumberValidationTextBox"/>
-                    <TextBlock x:Name="tab1_textBlock7" HorizontalAlignment="Left" Margin="0,223,0,0" TextWrapping="Wrap" Text="Enable Auto-Hide" VerticalAlignment="Top" Height="20" Width="187" FontStretch="Normal"/>
-                    <CheckBox x:Name="enableAutoHide" Content="" HorizontalAlignment="Right" Margin="0,225,-4,0" VerticalAlignment="Top"/>
-                    <TextBlock x:Name="tab1_textBlock8" HorizontalAlignment="Left" Margin="0,255,0,0" TextWrapping="Wrap" Text="Enable Bold Text" VerticalAlignment="Top" Height="20" Width="187" FontStretch="Normal"/>
-                    <CheckBox x:Name="enableBoldText" Content="" HorizontalAlignment="Right" Margin="0,257,-4,0" VerticalAlignment="Top" IsChecked="True"/>
+                    <ScrollViewer VerticalScrollBarVisibility="Auto" Margin="0,0,0,51">
+                        <Grid>
+                            <TextBlock x:Name="tab1_textBlock1" HorizontalAlignment="Left" Margin="0,16,0,0" TextWrapping="Wrap" Text="Overlay Position" VerticalAlignment="Top" Height="20" Width="187" FontStretch="Normal"/>
+                            <ComboBox x:Name="overlayPosition" Margin="192,15,4,0" VerticalAlignment="Top" Height="22">
+                                <ComboBoxItem Content="Top Left" IsSelected="True"/>
+                                <ComboBoxItem Content="Top Middle"/>
+                                <ComboBoxItem Content="Bottom Left"/>
+                                <ComboBoxItem Content="Bottom Middle"/>
+                                <ComboBoxItem Content="Bottom Right"/>
+                            </ComboBox>
+                            <TextBlock x:Name="tab1_textBlock2" HorizontalAlignment="Left" Margin="0,51,0,0" TextWrapping="Wrap" Text="Screen To Show" VerticalAlignment="Top" Height="20" Width="187" FontStretch="Normal"/>
+                            <ComboBox x:Name="screenToShow" Margin="192,50,4,0" VerticalAlignment="Top" Height="22">
+                                <ComboBoxItem Content="Main" IsSelected="True"/>
+                                <ComboBoxItem Content="Secondary"/>
+                            </ComboBox>
+                            <TextBlock x:Name="tab1_textBlock3" HorizontalAlignment="Left" Margin="0,87,0,0" TextWrapping="Wrap" Text="Metrics Style" VerticalAlignment="Top" Height="20" Width="187" FontStretch="Normal"/>
+                            <ComboBox x:Name="metricsStyle" Margin="192,86,4,0" VerticalAlignment="Top" Height="22">
+                                <ComboBoxItem Content="Percent" IsSelected="True"/>
+                                <ComboBoxItem Content="Bars" Margin="-1,0,0,0"/>
+                            </ComboBox>
+                            <TextBlock x:Name="tab1_textBlock4" HorizontalAlignment="Left" Margin="0,121,0,0" TextWrapping="Wrap" Text="Overlay Theme" VerticalAlignment="Top" Height="20" Width="187" FontStretch="Normal"/>
+                            <ComboBox x:Name="overlayTheme" Margin="192,120,4,0" VerticalAlignment="Top" Height="22">
+                                <ComboBoxItem Content="Light" IsSelected="True"/>
+                                <ComboBoxItem Content="Dark" Margin="-1,0,0,0"/>
+                            </ComboBox>
+                            <TextBlock x:Name="tab1_textBlock5" HorizontalAlignment="Left" Margin="0,155,0,0" TextWrapping="Wrap" Text="Overlay Opacity" VerticalAlignment="Top" Height="20" Width="187" FontStretch="Normal"/>
+                            <Slider x:Name="overlayOpacity" Margin="193,156,4,0" VerticalAlignment="Top" Maximum="100" Minimum="50" AutoToolTipPlacement="TopLeft" Value="50"/>
+                            <TextBlock x:Name="tab1_textBlock6" HorizontalAlignment="Left" Margin="0,189,0,0" TextWrapping="Wrap" Text="Custom Position" VerticalAlignment="Top" Height="20" Width="187" FontStretch="Normal"/>
+                            <TextBox x:Name="customPositionX" HorizontalAlignment="Left" Margin="192,188,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="76" InputScope="Number" Height="22" TextAlignment="Center" MaxLength="4" HorizontalContentAlignment="Left" Padding="0,0,0,0" VerticalContentAlignment="Center" PreviewTextInput="NumberValidationTextBox"/>
+                            <TextBox x:Name="customPositionY" HorizontalAlignment="Left" Margin="272,188,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="76" InputScope="Number" Height="22" MaxLength="4" TextAlignment="Center" VerticalContentAlignment="Center" PreviewTextInput="NumberValidationTextBox"/>
+                            <TextBlock x:Name="tab1_textBlock7" HorizontalAlignment="Left" Margin="0,223,0,0" TextWrapping="Wrap" Text="Enable Auto-Hide" VerticalAlignment="Top" Height="20" Width="187" FontStretch="Normal"/>
+                            <CheckBox x:Name="enableAutoHide" Content="" HorizontalAlignment="Right" Margin="0,225,-1,0" VerticalAlignment="Top"/>
+                            <TextBlock x:Name="tab1_textBlock8" HorizontalAlignment="Left" Margin="0,255,0,0" TextWrapping="Wrap" Text="Enable Bold Text" VerticalAlignment="Top" Height="20" Width="187" FontStretch="Normal"/>
+                            <CheckBox x:Name="enableBoldText" Content="" HorizontalAlignment="Right" Margin="0,257,-1,0" VerticalAlignment="Top" IsChecked="True"/>
+                        </Grid>
+                    </ScrollViewer>
                     <TextBlock x:Name="tab1_warning" HorizontalAlignment="Center" Margin="0,287,0,0" TextWrapping="Wrap" Text="Leave &quot;Custom Position&quot; at zero for the &quot;Overlay Position&quot; option to work." VerticalAlignment="Top" TextAlignment="Center" FontSize="9" Foreground="#FF656565"/>
                 </Grid>
             </TabItem>
@@ -99,6 +103,10 @@
                     <Slider x:Name="overheatForCpu" Margin="192,15,1,0" VerticalAlignment="Top" Maximum="90" Minimum="50" AutoToolTipPlacement="TopLeft" Value="50"/>
                     <TextBlock x:Name="tab4_textBlock2" HorizontalAlignment="Left" Margin="0,44,0,0" TextWrapping="Wrap" Text="Warn GPU Overheat (ºC)" VerticalAlignment="Top" Height="20" Width="187" FontStretch="Normal"/>
                     <Slider x:Name="overheatForGpu" Margin="192,45,1,0" VerticalAlignment="Top" Maximum="90" Minimum="50" AutoToolTipPlacement="TopLeft" Value="50"/>
+                    <TextBlock x:Name="tab1_textBlock9" HorizontalAlignment="Left" Margin="0,74,0,0" TextWrapping="Wrap" Text="GPU FAN1 Stopped" VerticalAlignment="Top" Height="20" Width="187" FontStretch="Normal"/>
+                    <CheckBox x:Name="gpuFan1Stopped" Content="" HorizontalAlignment="Right" Margin="0,76,-4,0" VerticalAlignment="Top"/>
+                    <TextBlock x:Name="tab1_textBlock10" HorizontalAlignment="Left" Margin="0,104,0,0" TextWrapping="Wrap" Text="GPU FAN2 Stopped" VerticalAlignment="Top" Height="20" Width="187" FontStretch="Normal"/>
+                    <CheckBox x:Name="gpuFan2Stopped" Content="" HorizontalAlignment="Right" Margin="0,106,-4,0" VerticalAlignment="Top"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Boot">

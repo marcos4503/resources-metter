@@ -25,3 +25,9 @@ D:\Visual-Studio\Resources Metter\obj\Release\Resources Metter.exe
 D:\Visual-Studio\Resources Metter\obj\Release\Resources Metter.pdb
 D:\Visual-Studio\Resources Metter\bin\Release\Microsoft.Win32.TaskScheduler.dll
 D:\Visual-Studio\Resources Metter\obj\Release\Resources Metter.csproj.AssemblyReference.cache
+D:\Visual-Studio\Resources Metter\bin\Release\LiveCharts.dll
+D:\Visual-Studio\Resources Metter\bin\Release\LiveCharts.Wpf.dll
+D:\Visual-Studio\Resources Metter\bin\Release\LiveCharts.pdb
+D:\Visual-Studio\Resources Metter\bin\Release\LiveCharts.xml
+D:\Visual-Studio\Resources Metter\bin\Release\LiveCharts.Wpf.pdb
+D:\Visual-Studio\Resources Metter\bin\Release\LiveCharts.Wpf.xml

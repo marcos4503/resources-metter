@@ -76,6 +76,8 @@ namespace Resources_Metter
             enableWindowRestorer.IsChecked = applicationPreferences.enableWindowRestorerForSecMonitor;
             overheatForCpu.Value = applicationPreferences.overheatWarningForCpu;
             overheatForGpu.Value = applicationPreferences.overheatWarningForGpu;
+            gpuFan1Stopped.IsChecked = applicationPreferences.gpuFan1Stopped;
+            gpuFan2Stopped.IsChecked = applicationPreferences.gpuFan2Stopped;
             autoStartBoot.IsChecked = applicationPreferences.startOnBoot;
 
             //Fill the ignore from auto hide list view
@@ -190,6 +192,8 @@ namespace Resources_Metter
             applicationPreferences.enableWindowRestorerForSecMonitor = (bool)enableWindowRestorer.IsChecked;
             applicationPreferences.overheatWarningForCpu = (int)overheatForCpu.Value;
             applicationPreferences.overheatWarningForGpu = (int)overheatForGpu.Value;
+            applicationPreferences.gpuFan1Stopped = (bool)gpuFan1Stopped.IsChecked;
+            applicationPreferences.gpuFan2Stopped = (bool)gpuFan2Stopped.IsChecked;
             applicationPreferences.startOnBoot = (bool)autoStartBoot.IsChecked;
 
             //Save the new preferences

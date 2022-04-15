@@ -25,3 +25,9 @@ D:\Visual-Studio\Resources Metter\obj\Debug\Resources Metter.csproj.CoreCompileI
 D:\Visual-Studio\Resources Metter\obj\Debug\Resources Metter.exe
 D:\Visual-Studio\Resources Metter\obj\Debug\Resources Metter.pdb
 D:\Visual-Studio\Resources Metter\obj\Debug\Resources Metter.csproj.CopyComplete
+D:\Visual-Studio\Resources Metter\bin\Debug\LiveCharts.dll
+D:\Visual-Studio\Resources Metter\bin\Debug\LiveCharts.Wpf.dll
+D:\Visual-Studio\Resources Metter\bin\Debug\LiveCharts.pdb
+D:\Visual-Studio\Resources Metter\bin\Debug\LiveCharts.xml
+D:\Visual-Studio\Resources Metter\bin\Debug\LiveCharts.Wpf.pdb
+D:\Visual-Studio\Resources Metter\bin\Debug\LiveCharts.Wpf.xml

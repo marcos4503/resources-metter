@@ -22,5 +22,7 @@
   </ignoreFromAutoHide>
   <overheatWarningForCpu>90</overheatWarningForCpu>
   <overheatWarningForGpu>90</overheatWarningForGpu>
+  <gpuFan1Stopped>true</gpuFan1Stopped>
+  <gpuFan2Stopped>true</gpuFan2Stopped>
   <startOnBoot>false</startOnBoot>
 </ApplicationPreferences>

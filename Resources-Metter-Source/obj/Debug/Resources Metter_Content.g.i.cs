@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/clock-icon-white.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/monitor-app/resources%20metter%20monitor.exe")]
 
 

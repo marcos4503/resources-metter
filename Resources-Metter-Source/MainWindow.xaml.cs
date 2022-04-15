@@ -95,7 +95,7 @@ namespace Resources_Metter
             //Start the updater of the metrics in the overlay
             StartMetricsUpdater(applicationPreferences.metricsUpdateInterval, applicationPreferences.networkInterfacePreferred,
                                 applicationPreferences.networkUnit, applicationPreferences.overheatWarningForCpu,
-                                applicationPreferences.overheatWarningForGpu);
+                                applicationPreferences.overheatWarningForGpu, applicationPreferences.gpuFan1Stopped, applicationPreferences.gpuFan2Stopped);
 
             //Start the another program fullscreen detector, if auto-hide is enabled
             if(applicationPreferences.enableAutoHide == true)
@@ -467,7 +467,7 @@ namespace Resources_Metter
             });
         }
 
-        public void StartMetricsUpdater(int updateInterval, int networkInstance, int networkUnit, int cpuOverheatWarn, int gpuOverheatWarn)
+        public void StartMetricsUpdater(int updateInterval, int networkInstance, int networkUnit, int cpuOverheatWarn, int gpuOverheatWarn, bool gpuFan1StoppedWarn, bool gpuFan2StoppedWarn)
         {
             //Initialize the needed variables for metrics
             WindowOverheatWarn overheatWarningWindow = new WindowOverheatWarn();
@@ -531,6 +531,9 @@ namespace Resources_Metter
                 notifyIcon.BalloonTipText = "Please select a Network Interface to be monitored in Settings.";
                 notifyIcon.ShowBalloonTip(3000);
             }
+            //Last date time of warning
+            DateTime lastGPUFan1WarningDateTime = DateTime.Now;
+            DateTime lastGPUFan2WarningDateTime = DateTime.Now;
 
             //Create a timer with delay of 300ms to update the program
             System.Windows.Forms.Timer timer = new System.Windows.Forms.Timer { Interval = updateInterval };
@@ -540,17 +543,19 @@ namespace Resources_Metter
                 float cpuTemp = 0;
                 float gpuEngineUsage = 0;
                 float gpuTemp = 0;
+                float gpuFan1Speed = 0;
+                float gpuFan2Speed = 0;
                 foreach(IHardware hardware in thisMonitoredComputer.Hardware)
                 {
                     if(hardware.HardwareType == HardwareType.Cpu)
                     {
                         hardware.Update();
                         foreach (ISensor sensor in hardware.Sensors)
-                            if (sensor.SensorType == SensorType.Temperature && sensor.Name == "Core Average")
+                            if (sensor.SensorType == SensorType.Temperature && sensor.Name == "CPU Package")
                                 if(sensor.Value != null)
                                     cpuTemp = (float)sensor.Value;
                     }
-                    if (hardware.HardwareType == HardwareType.GpuNvidia)
+                    if (hardware.HardwareType == HardwareType.GpuNvidia || hardware.HardwareType == HardwareType.GpuAmd)
                     {
                         hardware.Update();
                         foreach (ISensor sensor in hardware.Sensors)
@@ -561,19 +566,12 @@ namespace Resources_Metter
                             if (sensor.SensorType == SensorType.Temperature && sensor.Name == "GPU Core")
                                 if (sensor.Value != null)
                                     gpuTemp = (float)sensor.Value;
-                        }
-                    }
-                    if (hardware.HardwareType == HardwareType.GpuAmd)
-                    {
-                        hardware.Update();
-                        foreach (ISensor sensor in hardware.Sensors)
-                        {
-                            if (sensor.SensorType == SensorType.Load && sensor.Name == "GPU Core")
+                            if (sensor.SensorType == SensorType.Fan && sensor.Name == "GPU Fan 1")
                                 if (sensor.Value != null)
-                                    gpuEngineUsage = (float)sensor.Value;
-                            if (sensor.SensorType == SensorType.Temperature && sensor.Name == "GPU Core")
+                                    gpuFan1Speed = (float)sensor.Value;
+                            if (sensor.SensorType == SensorType.Fan && sensor.Name == "GPU Fan 2")
                                 if (sensor.Value != null)
-                                    gpuTemp = (float)sensor.Value;
+                                    gpuFan2Speed = (float)sensor.Value;
                         }
                     }
                 }
@@ -655,6 +653,20 @@ namespace Resources_Metter
                 if (cpuTemp < cpuOverheatWarn && gpuTemp < gpuOverheatWarn)
                     if (overheatWarningWindow != null)
                         overheatWarningWindow.Visibility = Visibility.Collapsed;
+                //Warn if the FAN1 of GPU is stopped and has passed 15 minutes since last warning
+                if (gpuFan1StoppedWarn == true && gpuFan1Speed == 0 && (new TimeSpan(new TimeSpan(DateTime.Now.Ticks).Ticks - new TimeSpan(lastGPUFan1WarningDateTime.Ticks).Ticks).Minutes) >= 15)
+                {
+                    notifyIcon.BalloonTipText = "The FAN1 of GPU is stopped! Please, verify it!";
+                    notifyIcon.ShowBalloonTip(3000);
+                    lastGPUFan1WarningDateTime = DateTime.Now;
+                }
+                //Warn if the FAN2 of GPU is stopped and has passed 15 minutes since last warning
+                if (gpuFan2StoppedWarn == true && gpuFan2Speed == 0 && (new TimeSpan(new TimeSpan(DateTime.Now.Ticks).Ticks - new TimeSpan(lastGPUFan2WarningDateTime.Ticks).Ticks).Minutes) >= 15)
+                {
+                    notifyIcon.BalloonTipText = "The FAN2 of GPU is stopped! Please, verify it!";
+                    notifyIcon.ShowBalloonTip(3000);
+                    lastGPUFan2WarningDateTime = DateTime.Now;
+                }
             });
         }
 
@@ -1076,6 +1088,33 @@ namespace Resources_Metter
             Normal = 1,
             Minimized = 2,
             Maximized = 3,
+        }
+
+        #endregion
+
+        #region ResourcesMetterMonitorWindowUnity
+
+        //Moving a window
+
+        [DllImport("user32.dll", SetLastError = true)]
+        static extern bool MoveWindow(IntPtr hWnd, int X, int Y, int Width, int Height, bool Repaint);
+
+        //Check if process is running
+
+        public static bool IsProcessRunning(Process process)
+        {
+            if (process == null)
+                throw new ArgumentNullException("process");
+
+            try
+            {
+                Process.GetProcessById(process.Id);
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+            return true;
         }
 
         #endregion

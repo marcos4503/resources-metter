@@ -36,6 +36,8 @@ namespace Resources_Metter
         public string[] ignoreFromAutoHide = new string[] { "Program Manager", " menu", "menu" };
         public int overheatWarningForCpu = 70;
         public int overheatWarningForGpu = 70;
+        public bool gpuFan1Stopped = false;
+        public bool gpuFan2Stopped = false;
         public bool startOnBoot = false;
 
         //Core methods
@@ -74,6 +76,8 @@ namespace Resources_Metter
                 ignoreFromAutoHide = loadedPreferences.ignoreFromAutoHide;
                 overheatWarningForCpu = loadedPreferences.overheatWarningForCpu;
                 overheatWarningForGpu = loadedPreferences.overheatWarningForGpu;
+                gpuFan1Stopped = loadedPreferences.gpuFan1Stopped;
+                gpuFan2Stopped = loadedPreferences.gpuFan2Stopped;
                 startOnBoot = loadedPreferences.startOnBoot;
             }
         }
