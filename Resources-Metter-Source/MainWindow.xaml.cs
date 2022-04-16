@@ -71,6 +71,7 @@ namespace Resources_Metter
             this.notifyIcon.Text = "Resources Monitor\nUpdating In " + applicationPreferences.metricsUpdateInterval + "ms";
             this.notifyIcon.MouseClick += NotifyIcon_Click;
             this.notifyIcon.ContextMenuStrip = new ContextMenuStrip();
+            this.notifyIcon.ContextMenuStrip.Items.Add("Task Manager", null, this.NotifyIcon_Tskmgr);
             this.notifyIcon.ContextMenuStrip.Items.Add("Reload Position", null, this.NotifyIcon_Reload);
             this.notifyIcon.ContextMenuStrip.Items.Add("Show Overlay", null, this.NotifyIcon_Show);
             this.notifyIcon.ContextMenuStrip.Items.Add("Hide Overlay", null, this.NotifyIcon_Hide);
@@ -756,6 +757,18 @@ namespace Resources_Metter
                 NotifyIcon_Show(sender, e);
                 return;
             }
+        }
+
+        private void NotifyIcon_Tskmgr(object sender, EventArgs e)
+        {
+            //Open the task manager as the user
+            Process process = new Process();
+            ProcessStartInfo startInfo = new ProcessStartInfo();
+            startInfo.WindowStyle = ProcessWindowStyle.Hidden;
+            startInfo.FileName = "cmd.exe";
+            startInfo.Arguments = "/C taskmgr exit";
+            process.StartInfo = startInfo;
+            process.Start();
         }
 
         private void NotifyIcon_Reload(object sender, EventArgs e)
