@@ -555,6 +555,13 @@ namespace Resources_Metter
                             if (sensor.SensorType == SensorType.Temperature && sensor.Name == "CPU Package")
                                 if(sensor.Value != null)
                                     cpuTemp = (float)sensor.Value;
+
+                        //If not found a value in "CPU Package", try to found in "Core (Tctl/Tdie)". This is useful for AMD Ryzen CPUs
+                        if(cpuTemp == 0)
+                            foreach (ISensor sensor in hardware.Sensors)
+                                if (sensor.SensorType == SensorType.Temperature && sensor.Name == "Core (Tctl/Tdie)")
+                                    if (sensor.Value != null)
+                                        cpuTemp = (float)sensor.Value;
                     }
                     if (hardware.HardwareType == HardwareType.GpuNvidia || hardware.HardwareType == HardwareType.GpuAmd)
                     {
@@ -574,6 +581,18 @@ namespace Resources_Metter
                                 if (sensor.Value != null)
                                     gpuFan2Speed = (float)sensor.Value;
                         }
+
+                        //If not found values for "GPU Fan 1", try to found in "GPU Fan". This is useful for GPUs with one Fan
+                        if(gpuFan1Speed == 0)
+                            foreach (ISensor sensor in hardware.Sensors)
+                                if (sensor.SensorType == SensorType.Fan && sensor.Name == "GPU Fan")
+                                    if (sensor.Value != null)
+                                        gpuFan1Speed = (float)sensor.Value;
+                        if (gpuFan2Speed == 0)
+                            foreach (ISensor sensor in hardware.Sensors)
+                                if (sensor.SensorType == SensorType.Fan && sensor.Name == "GPU Fan")
+                                    if (sensor.Value != null)
+                                        gpuFan2Speed = (float)sensor.Value;
                     }
                 }
 
