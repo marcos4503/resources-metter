@@ -16,7 +16,7 @@ By right-clicking the "Resources Metter" status icon on your taskbar, you will b
 
 You need to fulfill some requirements to be able to use this Software...
 
-- The computer may need to have .Net 3.1 installed in order to run the Software.
+- The computer may need to have <a href="https://go.microsoft.com/fwlink/?LinkId=2085155" target="_blank">.Net Framework 4.8</a> installed in order to run the Software.
 - The computer must be 64-bit.
 - Your operating system's UAC needs to be disabled, or at the very least you need to allow Resources Metter to work without the UAC getting in your way.Your operating system's UAC needs to be disabled, or at the very least you need to allow Resources Metter to work without the UAC getting in your way. If the UAC blocks the Resources Metter for some reason, several metering functions will stop working. You can refer to <a href="https://www.howtogeek.com/howto/windows-vista/disable-user-account-control-uac-the-easy-way-on-windows-vista/" target="_blank">this</a> link for more details on Windows UAC.
 
